@@ -4,6 +4,35 @@ const seekBar = document.getElementById('seek-bar');
 const currentTimeDisplay = document.getElementById('current-time');
 const durationDisplay = document.getElementById('duration');
 
+// Tanggal awal dekat dengan Syifa: 3 Mei 2026, 11:00 WIB
+const startDate = new Date('2026-05-03T11:00:00');
+
+// Fungsi Love Counter
+function updateLoveCounter() {
+    const now = new Date();
+    const diff = now - startDate;
+
+    if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+
+        if (daysEl) daysEl.innerText = days;
+        if (hoursEl) hoursEl.innerText = hours;
+        if (minutesEl) minutesEl.innerText = minutes;
+        if (secondsEl) secondsEl.innerText = seconds;
+    }
+}
+
+setInterval(updateLoveCounter, 1000);
+updateLoveCounter();
+
 const playlist = [
     { src: 'assets/lagu/lagu1.mp3', title: 'Hanya Untuk-Mu', artist: 'Ten2Five', cover: 'assets/cover/cover1.jpg' },
     { src: 'assets/lagu/lagu2.mp3', title: 'Aku Milikmu', artist: 'Dewa19', cover: 'assets/cover/cover2.jpg' },

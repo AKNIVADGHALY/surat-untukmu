@@ -188,3 +188,75 @@ section.in-view > *:nth-child(7) { transition-delay: 0.7s; }
     section div[style*="border-left"] p { font-size: 12px !important; line-height: 1.6 !important; }
     section p[style*="made with love"] { margin-top: 20px !important; font-size: 14px !important; }
 }
+
+.button-wrapper {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.btn-bunga {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-bunga:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 117, 140, 0.6);
+}
+
+/* Styling Love Counter */
+.love-counter-box {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 20px 15px;
+    margin: 25px auto 10px auto;
+    width: 100%;
+    max-width: 450px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.counter-subtitle {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.counter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.counter-item span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.counter-item p {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
